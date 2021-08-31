@@ -1,0 +1,40 @@
+<div class="user-form">
+    <div class="modal-header">
+        <h4 class="modal-title">{{data.type === 'edit' ? "Edit User": "Add User"}}</h4>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="userForm" #f="ngForm" (ngSubmit)="onSubmitUser()" id="ngForm">
+            <div class="control">
+                <label for="userName" class="form-label">Name<span>*</span></label>
+                <input type="text" formControlName="name" class="form-control" id="userName" [ngClass]="{ 'is-invalid': submitted && userForm.get('name')?.errors }">
+                <div *ngIf="submitted && userForm.get('name')?.errors" class="invalid-feedback">
+                  <div *ngIf="userForm.get('name')?.errors?.required">Phone no is required</div>
+                </div>
+              </div>
+              <div class="control">
+                <label for="userEmail" class="form-label">Email<span>*</span></label>
+                <input type="email" formControlName="email" class="form-control" id="userEmail" [ngClass]="{ 'is-invalid': submitted && userForm.get('email')?.errors }">
+                <div *ngIf="submitted && userForm.get('email')?.errors" class="invalid-feedback">
+                  <div *ngIf="userForm.get('email')?.errors?.required">Email is required</div>
+                  <div *ngIf="userForm.get('email')?.errors?.email">Email must be a valid email address</div>
+              </div>
+              </div>
+              <div class="control"> 
+                <label for="userPhone" class="form-label">Phone<span>*</span></label>
+                <input type="text" class="form-control" formControlName="phone" id="userPhone" [ngClass]="{ 'is-invalid': submitted && userForm.get('phone')?.errors }">
+                <div *ngIf="submitted && userForm.get('phone')?.errors" class="invalid-feedback">
+                  <div *ngIf="userForm.get('phone')?.errors?.required">Phone no is required</div>
+                </div>
+              </div>
+              <div class="control">
+                <label for="userWebsite" class="form-label">Website</label>
+                <input type="text" class="form-control" id="userWebsite" formControlName="website">
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" form="ngForm" class="btn btn-light submit-btn">{{data.type === 'edit' ? "Edit User": "Add User"}}</button>
+                <button type="button" class="btn btn-light" (click)="activeModal.close(false)">Close</button>
+            </div>
+        </form>
+    </div>
+</div>

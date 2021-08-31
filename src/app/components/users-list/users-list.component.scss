@@ -1,0 +1,17 @@
+.alert{
+    font-size: 12px;
+    padding: 10px 15px;
+    i{
+        padding-right: 10px;
+    }
+}
+.users-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    app-user-card{
+        width: calc(50% - 1em);
+    }
+}

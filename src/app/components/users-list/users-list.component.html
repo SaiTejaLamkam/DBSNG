@@ -1,0 +1,11 @@
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+   <span><i class="bi bi-info-circle-fill"></i></span>
+    <div>
+      Please click on User name to edit the details
+    </div>
+</div>
+<section class="users-list">
+    <ng-container *ngFor="let user of usersList">
+        <app-user-card [userData]="user"></app-user-card>
+    </ng-container>
+</section>

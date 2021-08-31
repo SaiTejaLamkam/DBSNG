@@ -1,0 +1,26 @@
+<div class="user">
+    
+    <div class="user-info">
+        <a href="#" class="user-name" (click)="editUser($event)">
+            <span><i class="bi bi-person-badge"></i></span>
+            <span>{{userData.name}}</span>
+        </a>
+        <div class="user-contact">
+            <p class="user-mail">
+                <span><i class="bi bi-envelope-fill"></i></span>
+                <span>{{userData.email}}</span>
+            </p>
+            <p class="user-phone">
+                <span><i class="bi bi-telephone-fill"></i></span>
+                <span>{{userData.phone}}</span>
+            </p>
+        </div>
+        <p class="user-website" *ngIf="userData.website">
+            <span><i class="bi bi-globe2"></i></span>
+            <span>{{userData.website}}</span>
+        </p>
+    </div>
+    <div class="user-img">
+        <i class="bi bi-person-circle"></i>
+    </div>
+</div>

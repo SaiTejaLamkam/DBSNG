@@ -1,0 +1,10 @@
+<app-overlay-spinner *ngIf="isLoading"></app-overlay-spinner>
+<div class="app-root-section">
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">DBS-NG</a>
+    <div class="nav-links">
+      <button type="button" class="btn btn-dark" id="create-user" (click)="createUser()">Create User</button>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
