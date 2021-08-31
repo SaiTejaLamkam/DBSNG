@@ -17,7 +17,6 @@ export class CommonService {
     private http: HttpClient,
     private modalService: NgbModal
   ) { 
-    console.log(environment,'+++');
   }
 
   getUsers():Observable<any> {
