@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
-For Demo purpose deployed the project in firebase : [Application URL](https://ngdemo-290b9.web.app) version 12.1.4.
+For Demo purpose deployed the project in firebase : [Application URL](https://ngdemo-290b9.web.app).
 
 ## Libraries Used
 1. "@ng-bootstrap/ng-bootstrap": ^10.0.0
@@ -18,6 +18,7 @@ For Demo purpose deployed the project in firebase : [Application URL](https://ng
 5. Used Reactive form to Add/Edit User
 6. Parent and Child Components data transfer using @Input
 7. Showing Loader when api call is pending
+8. Used ng-bootstrap Modal to show from
 
 ## Note - [jsonplaceholder](https://jsonplaceholder.typicode.com/guide/) does not provide any API to edit the User data , so i handled it locally 
 
